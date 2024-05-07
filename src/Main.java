@@ -9,19 +9,19 @@ public class Main {
         String path = "../dictionary/dictionary.txt";
         System.out.println("Masukkan kata awal:");
         String start = scanner.nextLine();
-        start.toLowerCase();
+        start = start.toLowerCase();
         while (!(StringCheck.checkValid(start) && StringCheck.checkDictionary(path, start, 1))){
             System.out.println("Masukkan kata awal:");
             start = scanner.nextLine();
-            start.toLowerCase();
+            start = start.toLowerCase();
         }
         System.out.println("Masukkan kata yang ingin dicapai:");
         String dest = scanner.nextLine();
-        dest.toLowerCase();
+        dest = dest.toLowerCase();
         while (!(StringCheck.checkValid(dest) && StringCheck.checkSameLength(start, dest) && StringCheck.checkDictionary(path, dest, 1))){
             System.out.println("Masukkan kata yang ingin dicapai:");
             dest = scanner.nextLine();
-            dest.toLowerCase();
+            dest = dest.toLowerCase();
         }
         System.out.println("Pilih algoritma, masukkan angka diantara 1-3:\n1. Uniform Cost Search\n2. Greedy Best First Search\n3. A*");
         int choice = scanner.nextInt();
